@@ -10,6 +10,8 @@ function Login() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const [error, setError] = useState('');
+
   const handleLogin = (e) => {
     e.preventDefault(); // Evita que se recargue la página al enviar el formulario
 
@@ -24,8 +26,7 @@ function Login() {
         if (response.status === 200) {
           setIsLoggedIn(true);
         } else {
-          // La autenticación falló
-          // Mostrar mensaje de error o realizar alguna acción
+          setError('Error de autenticación. Revise sus credenciales');
         }
       })
       .catch(error => {
@@ -38,32 +39,39 @@ function Login() {
   }
 
   return (
-    <div className="login-form">
+    <div className="login-form" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <div className="login-form__content">
-        <h2>Inicio de sesión</h2>
+        <h4>Inicio de sesión</h4>
         <form onSubmit={handleLogin}>
           <div className="form-group">
             <label htmlFor="login">Nombre de usuario:</label>
-            <input
+            <div><input
               type="text"
               id="login"
               value={login}
               onChange={e => setlogin(e.target.value)}
             />
+            </div>
           </div>
           <div className="form-group">
             <label htmlFor="password">Contraseña:</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-            />
+            <div>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+              />
+            </div>
           </div>
           <div className="form-buttons">
             <button type="submit" className="btn btn-primary"> Ingresar </button>
             <button type="button" className="btn btn-secondary">Cancelar</button>
           </div>
+          <div style={{ color: 'red', fontSize: '16px' }}>
+            {error && <p className="error-message">{error}</p>}
+          </div>
+
         </form>
       </div>
     </div>

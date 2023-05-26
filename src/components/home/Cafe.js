@@ -13,12 +13,10 @@ function Cafe() {
         fetch(URL)
             .then(response => response.json())
             .then(data => {
-                // Almacenar las ubicaciones en el estado
                 console.log("Se ha cargado la lista de cafés: " + data);
                 setCafes(data);
             })
             .catch(error => {
-                // Manejar errores de la petición
                 console.error(error);
             });
     }, []);
@@ -79,13 +77,13 @@ function Cafe() {
                 </div>
                 <div className="col-4">
                     {selectedCard && (
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' , backgroundColor : '#FFCCCC'}} >
+                            <Card.Title >{selectedCard.nombre}</Card.Title>
+                            <Card.Text>{selectedCard.fecha_cultivo}</Card.Text>
                             <Card.Img variant="top" src={selectedCard.imagen} />
                             <Card.Body>
-                                <Card.Title>{selectedCard.nombre}</Card.Title>
                                 <Card.Text>{selectedCard.region}</Card.Text>
                                 <Card.Text>{selectedCard.notas}</Card.Text>
-                                <Card.Text>{selectedCard.fecha_cultivo}</Card.Text>
                             </Card.Body>
                         </Card>
                     )}

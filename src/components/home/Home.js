@@ -4,14 +4,16 @@ import Login from './Login';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import coffeeImage from './coffee.png';
+
 
 function Home() {
     return (
-        <div className='container-fluid' style={{ height: '100vh' }}>
+        <div className='container-fluid'>
             <div className='col-12'>
-                <div calsName='row'>
+                <div calsName='row' >
                     <h1>El aroma mágico</h1>
-                    <img src='public/coffee.png' alt='coffee' />
+                    <img src={coffeeImage} alt='coffee' />
                 </div>
                 <div className='row'>
                     <Login />
