@@ -39,7 +39,7 @@ function Login() {
   }
 
   return (
-    <div className="login-form" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <div className="login-form" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <div className="login-form__content">
         <h4>Inicio de sesión</h4>
         <form onSubmit={handleLogin}>
@@ -65,8 +65,9 @@ function Login() {
             </div>
           </div>
           <div className="form-buttons">
-            <button type="submit" className="btn btn-primary"> Ingresar </button>
-            <button type="button" className="btn btn-secondary">Cancelar</button>
+            <button type="submit" className="btn btn-success"> Ingresar </button>
+            <button type="submit" className="btn btn-danger"> Cancelar </button>
+
           </div>
           <div style={{ color: 'red', fontSize: '16px' }}>
             {error && <p className="error-message">{error}</p>}
