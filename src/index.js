@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { IntlProvider } from 'react-intl';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,9 +10,16 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const userLanguage = navigator.language.slice(0, 2);
+var language = userLanguage === 'es' ? 'es' : 'en';
+
+
+
 root.render(
   <React.StrictMode>
+    <IntlProvider locale="en" messages={language}>
     <App />
+    </IntlProvider>
   </React.StrictMode>
 );
 
