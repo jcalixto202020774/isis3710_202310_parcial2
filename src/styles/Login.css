@@ -1,0 +1,95 @@
+.txt-inicio {
+    /* Inicio de sesión */
+
+    position: absolute;
+    width: 872px;
+    height: 34px;
+    left: 279px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+}
+
+.login-form {
+    /* Rectangle 3 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 881px;
+    height: 450px;
+    left: 279px;
+
+    background: rgba(224, 187, 187, 0.2);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.login-label {
+    /* Nombre de usuario */
+
+    width: 186px;
+    height: 24px;
+    left: 456px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+    margin-top: 10px;
+
+
+}
+
+.login-input {
+    /* Rectangle 4 */
+
+    width: 556px;
+    height: 58px;
+    left: 456px;
+
+    background: #D9D9D9;
+
+    margin-bottom: 20px;
+
+}
+
+.btn-success{
+    /* Rectangle 6 */
+
+position: absolute;
+width: 253px;
+height: 53px;
+
+margin-top:50px;
+
+
+background: #8FA98F;
+
+}
+
+.btn-danger{
+    /* Rectangle 7 */
+
+position: absolute;
+width: 253px;
+height: 53px;
+margin-left: 300px;
+
+margin-top:50px;
+
+background: #E75D5D;
+
+}

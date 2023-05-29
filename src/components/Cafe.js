@@ -77,13 +77,18 @@ function Cafe() {
                 </div>
                 <div className="col-4">
                     {selectedCard && (
-                        <Card style={{ width: '18rem' , backgroundColor : '#FFCCCC'}} >
-                            <Card.Title >{selectedCard.nombre}</Card.Title>
-                            <Card.Text>{selectedCard.fecha_cultivo}</Card.Text>
+                        <Card style={{ width: '18rem', backgroundColor: '#E0BBBB' }} >
+                            <Card.Title style={{ fontFamily: 'Inter', fontStyle: 'normal', fontWeight: 900, fontSize: '18px', lineHeight: '22px', textAlign: 'center'}}>{selectedCard.nombre}</Card.Title>
+                            <Card.Text style={{ fontFamily: 'Inter', fontStyle: 'normal', fontWeight: 300, fontSize: '18px', lineHeight: '22px', textAlign: 'center'}}>{selectedCard.fecha_cultivo}</Card.Text>
                             <Card.Img variant="top" src={selectedCard.imagen} />
                             <Card.Body>
-                                <Card.Text>{selectedCard.region}</Card.Text>
-                                <Card.Text>{selectedCard.notas}</Card.Text>
+                                <Card.Text style={{ fontFamily: 'Inter', fontStyle: 'normal', fontWeight: 300, fontSize: '18px', lineHeight: '22px', textAlign: 'center' }}>Notas</Card.Text>
+                                <Card.Text style={{ fontFamily: 'Inter', fontStyle: 'normal', fontWeight: 300, fontSize: '18px', lineHeight: '22px', textAlign: 'center' }}>{selectedCard.notas}</Card.Text>
+
+                                <Card.Text style={{ fontFamily: 'Inter', fontStyle: 'normal', fontWeight: 900, fontSize: '18px', lineHeight: '22px', textAlign: 'center' }}>Cultivado a una altura de</Card.Text>
+                                <Card.Text style={{ fontFamily: 'Inter', fontStyle: 'normal', fontWeight: 900, fontSize: '18px', lineHeight: '22px', textAlign: 'center' }}>{selectedCard.altura} msnm</Card.Text>
+
+
                             </Card.Body>
                         </Card>
                     )}
